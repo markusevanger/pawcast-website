@@ -7,6 +7,7 @@ import {Carousel, CarouselApi, CarouselContent, CarouselItem} from "@/components
 import {useTranslation} from "react-i18next";
 import {useEffect, useState} from "react";
 
+
 function App() {
 
     const [theme, setTheme] = useState(localStorage.getItem('pawcast-theme') || 'dark');
@@ -32,15 +33,15 @@ function App() {
 
 
     const screenshotUrls = [
-        `src/assets/app_images/${theme}/age_setup.png`,
-        `src/assets/app_images/${theme}/homescreen.png`,
-        `src/assets/app_images/${theme}/homescreen_2.png`,
-        `src/assets/app_images/${theme}/location_setup.png`,
-        `src/assets/app_images/${theme}/name_setup.png`,
-        `src/assets/app_images/${theme}/nose_setup.png`,
-        `src/assets/app_images/${theme}/settingsscreen.png`,
-        `src/assets/app_images/${theme}/weatherscreen.png`,
-        `src/assets/app_images/${theme}/welcome.png`,
+        `/${theme}/age_setup.png`,
+        `/${theme}/homescreen.png`,
+        `/${theme}/homescreen_2.png`,
+        `/${theme}/location_setup.png`,
+        `/${theme}/name_setup.png`,
+        `/${theme}/nose_setup.png`,
+        `/${theme}/settingsscreen.png`,
+        `/${theme}/weatherscreen.png`,
+        `/${theme}/welcome.png`,
     ];
 
     const [t] = useTranslation("global")
@@ -80,13 +81,13 @@ function App() {
                         <div className={"flex justify-center lg:justify-between"}>
                             <img
                                 className={"dark:hidden object-contain w-[80%] min-w-48 drop-shadow-2xl transition-all"}
-                                src={`src/assets/app_images/light/home_sideways_with_companion.png`}
+                                src={`/light/home_sideways_with_companion.png`}
                                 alt={"A mockup displaying the Pawcast Homescreen"}>
                             </img>
 
                             <img
                                 className={"hidden dark:block object-contain w-[80%] min-w-48 drop-shadow-2xl transition-all"}
-                                src={`src/assets/app_images/dark/home_sideways_with_companion.png`}
+                                src={`/dark/home_sideways_with_companion.png`}
                                 alt={"A mockup displaying the Pawcast Homescreen"}>
                             </img>
                         </div>
