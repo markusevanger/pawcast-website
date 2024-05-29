@@ -19,7 +19,7 @@ export default function NavBar(props : {setThemeString : (newTheme:'dark' | 'lig
 
         <TooltipProvider>
             <Tooltip>
-                <TooltipTrigger className={"cursor-not-allowed"}>
+                <TooltipTrigger className={""}>
                     <Button variant={"outline"} disabled={true} size={"icon"} > <Github/> </Button>
                 </TooltipTrigger>
                 <TooltipContent>

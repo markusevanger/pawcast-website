@@ -32,6 +32,7 @@ function App() {
     }, [api])
 
 
+
     const screenshotUrls = [
         `/${theme}/age_setup.png`,
         `/${theme}/homescreen.png`,
@@ -70,9 +71,9 @@ function App() {
                             </p>
 
                             <div className={"flex gap-3 md:items-center flex-col md:flex-row"}>
-                                <Button className={buttonClass}> <Code
+                                <Button className={buttonClass} disabled={true}> <Code
                                     className={"mr-2 h-4 w-4"}/> {t("hero.repositoryButton")} </Button>
-                                <Button className={buttonClass} variant={"outline"}> <Text
+                                <Button className={buttonClass} disabled={true} variant={"outline"}> <Text
                                     className={"mr-2 h-4 w-4"}/> {t("hero.reportButton")}
                                 </Button>
                             </div>
@@ -122,7 +123,7 @@ function App() {
                                 <p> {t("cardSection.builtIn.body")}</p>
                             </CardContent>
                             <CardFooter>
-                                <Button className={buttonClass} size={"sm"} variant={"outline"}> <Code
+                                <Button className={buttonClass} disabled={true} size={"sm"} variant={"outline"}> <Code
                                     className={"mr-2 h-4 w-4"}/> {t("cardSection.builtIn.button")}</Button>
                             </CardFooter>
                         </Card>
@@ -141,7 +142,7 @@ function App() {
 
                             </CardContent>
                             <CardFooter>
-                                <Button size={"sm"} variant={"outline"} className={buttonClass}>
+                                <Button size={"sm"} variant={"outline"} disabled={true} className={buttonClass}>
                                     <Text
                                         className={"mr-2 h-4 w-4"}/> {t("cardSection.design.button")}</Button>
                             </CardFooter>
@@ -180,7 +181,7 @@ function App() {
                                 </CarouselContent>
                             </Carousel>
                             <div className="py-2 text-center text-sm text-muted-foreground">
-                                Screenshot {current} / {count}
+                                {t("screenshotsSection.sectionTitle")} {current} / {count}
                             </div>
                         </div>
                     </div>
@@ -195,9 +196,11 @@ function App() {
                         <p> {t("bottomInfo.developedBy")} <a className={"underline"}
                                                              href={t("bottomInfo.markusevangerLink")}>markusevanger.no</a>💖
                         </p>
-                        <p><a href={"https://ui.shadcn.com/"} className={"underline"}>Github</a></p>
+                        <p><a href={"https://github.com/markusevanger/pawcast-website/"} className={"underline"}>Github</a></p>
                     </div>
                 </section>
+
+                <div className={"h-10"}></div>
 
             </div>
         </div>
