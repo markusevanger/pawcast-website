@@ -1,7 +1,7 @@
 import './App.css'
 import NavBar from "@/components/NavBar.tsx";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card.tsx";
-import {Code, PawPrint, Text, Wrench} from "lucide-react";
+import {ArrowLeft, ArrowRight, Code, PawPrint, Text, Wrench} from "lucide-react";
 import {Button} from "@/components/ui/button.tsx";
 import {Carousel, CarouselApi, CarouselContent, CarouselItem} from "@/components/ui/carousel.tsx";
 import {useTranslation} from "react-i18next";
@@ -14,6 +14,7 @@ function App() {
     const setThemeString = (newTheme: 'dark' | 'light') => {
         setTheme(newTheme);
     }
+
 
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
@@ -180,9 +181,16 @@ function App() {
                                     ))}
                                 </CarouselContent>
                             </Carousel>
+
                             <div className="py-2 text-center text-sm text-muted-foreground">
                                 {t("screenshotsSection.sectionTitle")} {current} / {count}
                             </div>
+
+                            <div className={"flex w-full justify-center gap-5 p-2"}>
+                                <Button size={"icon"} onClick={() => api?.scrollPrev(false)} variant={"outline"}><ArrowLeft></ArrowLeft></Button>
+                                <Button size={"icon"} onClick={() => api?.scrollNext(false)} variant={"outline"}><ArrowRight></ArrowRight></Button>
+                            </div>
+
                         </div>
                     </div>
                 </section>
