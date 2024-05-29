@@ -1,0 +1,49 @@
+{
+
+  "navbar" : {
+    "tooltips" : {
+      "github" : "Github will be made public when examination is done.",
+      "language" : "Toggle language",
+      "theme" : "Change theme"
+    }
+  },
+
+  "hero" : {
+    "title": "Pawcast",
+   "description" : "An Android Native weather app for dog owners, designed with help from veterinarians. Made as a part of our IN2000 project at the Institute of Informatics at the University of Oslo",
+    "repositoryButton" : "Check out the repository",
+    "reportButton" : "Read the project report"
+  },
+
+
+  "cardSection" : {
+    "what" : {
+      "title" : "What does it do?",
+      "body" : "Pawcast is an app designed to help dog owners take the best possible care of their furry friends. By providing weather-based recommendations and insights tailored to your dog's specific needs, Pawcast ensures their safety and comfort in all weather conditions. With Pawcast, you can easily determine the best times for walks, understand potential weather risks, and receive personalized advice to keep your dog happy and healthy."
+    },
+
+    "builtIn" : {
+      "title" : "Built in Android Native",
+      "body" : "Pawcast is built in Kotlin and Jetpack Compose, following Material 3 guidelines.",
+      "button" : "Check out our code"
+    },
+
+    "design" : {
+      "title" : "Designed with veterinarians",
+      "body" : "The app is designed in collaboration with industry professionals.",
+      "button" : "Read more about our process in the project report"
+    }
+  },
+
+  "screenshotsSection" : {
+    "sectionTitle" : "Screenshots"
+  },
+
+  "bottomInfo" : {
+    "websiteMadeIn" : "Made in react, tailwind and a lot of ",
+    "developedBy" : "Developed by",
+    "Github" : "Github",
+    "markusevangerLink" : "https://markusevanger.no/en"
+  }
+
+}
