@@ -67,15 +67,15 @@ function App() {
                         <div className={"justify-center flex-col flex gap-1"}>
 
                             <h1 className={"text-4xl font-bold"}>{t("hero.title")}</h1>
-                            <p className={"p-2"}>
+                            <p className={"pt-2"}>
                                 {t("hero.description")}
                             </p>
 
-                            <div className={"flex gap-3 md:items-center flex-col md:flex-row"}>
-                                <Button className={buttonClass} disabled={true}> <Code
+                            <div className={"flex gap-3 w-full md:items-center flex-col md:flex-row py-5"}>
+                                <Button tooltipContent={t("disabledDisclaimers.github")} className={buttonClass + " w-full"} disabled={true}> <Code
                                     className={"mr-2 h-4 w-4"}/> {t("hero.repositoryButton")} </Button>
-                                <Button className={buttonClass} disabled={true} variant={"outline"}> <Text
-                                    className={"mr-2 h-4 w-4"}/> {t("hero.reportButton")}
+                                <Button tooltipContent={t("disabledDisclaimers.report")} className={buttonClass + " w-full"} disabled={true} variant={"outline"}> <Text
+                                     className={"mr-2 h-4 w-4"}/> {t("hero.reportButton")}
                                 </Button>
                             </div>
                         </div>
@@ -124,7 +124,7 @@ function App() {
                                 <p> {t("cardSection.builtIn.body")}</p>
                             </CardContent>
                             <CardFooter>
-                                <Button className={buttonClass} disabled={true} size={"sm"} variant={"outline"}> <Code
+                                <Button tooltipContent={t("disabledDisclaimers.github")} className={buttonClass} disabled={true} size={"sm"} variant={"outline"}> <Code
                                     className={"mr-2 h-4 w-4"}/> {t("cardSection.builtIn.button")}</Button>
                             </CardFooter>
                         </Card>
@@ -143,7 +143,7 @@ function App() {
 
                             </CardContent>
                             <CardFooter>
-                                <Button size={"sm"} variant={"outline"} disabled={true} className={buttonClass}>
+                                <Button tooltipContent={t("disabledDisclaimers.report")} size={"sm"} variant={"outline"} disabled={true} className={buttonClass}>
                                     <Text
                                         className={"mr-2 h-4 w-4"}/> {t("cardSection.design.button")}</Button>
                             </CardFooter>

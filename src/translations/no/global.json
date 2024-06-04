@@ -3,11 +3,16 @@
 
   "navbar": {
     "tooltips": {
-      "github": "Github vil bli gjort offentlig når eksamen er ferdig.",
       "language": "Bytt språk",
       "theme": "Endre tema"
     }
   },
+
+  "disabledDisclaimers" : {
+    "github" : "Github vil bli gjort offentlig når eksamen er ferdig.",
+    "report" : "Rapport vil bli gjort offentlig når eksamen er ferdig."
+  },
+
 
   "hero": {
     "title": "Pawcast",

@@ -2,10 +2,14 @@
 
   "navbar" : {
     "tooltips" : {
-      "github" : "Github will be made public when examination is done.",
       "language" : "Toggle language",
       "theme" : "Change theme"
     }
+  },
+
+  "disabledDisclaimers" : {
+    "github" : "Github will be made public when examination is done.",
+    "report" : "Report will be made public when examination is done."
   },
 
   "hero" : {
