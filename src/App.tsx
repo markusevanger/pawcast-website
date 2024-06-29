@@ -7,7 +7,7 @@ import {Carousel, CarouselApi, CarouselContent, CarouselItem} from "@/components
 import {useTranslation} from "react-i18next";
 import {useEffect, useState} from "react";
 // @ts-ignore
-import Pdf from './assets/prosjektrapport.pdf'
+import Pdf from './prosjektrapport.pdf'
 
 function App() {
 
@@ -38,7 +38,7 @@ function App() {
 
 
     const repoUrl = "https://github.com/markusevanger/pawcast/"
-    const reportUrl = "https://pawcast.markusevanger.no/prosjektrapport-B536DxSL.pdf"
+    const reportUrl = Pdf
 
     const screenshotUrls = [
         `/${theme}/age_setup.png`,
