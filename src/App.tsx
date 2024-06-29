@@ -6,7 +6,6 @@ import {Button} from "@/components/ui/button.tsx";
 import {Carousel, CarouselApi, CarouselContent, CarouselItem} from "@/components/ui/carousel.tsx";
 import {useTranslation} from "react-i18next";
 import {useEffect, useState} from "react";
-import Pdf from './assets/prosjektrapport.pdf'
 
 function App() {
 
@@ -37,8 +36,7 @@ function App() {
 
 
     const repoUrl = "https://github.com/markusevanger/pawcast/"
-    const reportUrl = "https://pawcast.markusevanger.no/prosjektrapport.pdf"
-
+    const reportUrl = "https://pawcast.markusevanger.no/prosjektrapport-B536DxSL.pdf"
 
     const screenshotUrls = [
         `/${theme}/age_setup.png`,
@@ -58,10 +56,6 @@ function App() {
 
     return (
         <div className={""}>
-
-
-            <a href={Pdf} target={"_blank"}> pdf!</a>
-
 
             <div className={"p-5"}>
                 <NavBar setThemeString={setThemeString}/>
