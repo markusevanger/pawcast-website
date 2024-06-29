@@ -6,6 +6,8 @@ import {Button} from "@/components/ui/button.tsx";
 import {Carousel, CarouselApi, CarouselContent, CarouselItem} from "@/components/ui/carousel.tsx";
 import {useTranslation} from "react-i18next";
 import {useEffect, useState} from "react";
+// @ts-ignore
+import Pdf from './assets/prosjektrapport.pdf'
 
 function App() {
 
