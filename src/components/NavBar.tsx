@@ -17,7 +17,7 @@ export default function NavBar(props: { setThemeString: (newTheme: 'dark' | 'lig
     return <div className={"flex flex-row justify-end gap-3 w-full"}>
 
 
-        <Button tooltipContent={t("disabledDisclaimers.github")} variant={"outline"} disabled={true} size={"icon"}> <Github/> </Button>
+        <Button variant={"outline"} size={"icon"} onClick={()=> window.open("https://github.com/markusevanger/pawcast/")}> <Github/> </Button>
         <Button tooltipContent={t("navbar.tooltips.language")} variant={"outline"} size={"icon"} className={"px-5"}
                 onClick={handleToggleLanguage}> {i18n.language.toUpperCase()} </Button>
         <ToggleDarkModeButton setThemeString={props.setThemeString} tooltip={t("navbar.tooltips.theme")}/>

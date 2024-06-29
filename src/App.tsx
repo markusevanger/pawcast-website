@@ -34,6 +34,10 @@ function App() {
 
 
 
+    const repoUrl = "https://github.com/markusevanger/pawcast/"
+    const reportUrl = "https://pawcast.markusevanger.no/prosjektrapport.pdf"
+
+
     const screenshotUrls = [
         `/${theme}/age_setup.png`,
         `/${theme}/homescreen.png`,
@@ -72,11 +76,12 @@ function App() {
                             </p>
 
                             <div className={"flex gap-3 w-full md:items-center flex-col md:flex-row py-5"}>
-                                <Button tooltipContent={t("disabledDisclaimers.github")} className={buttonClass + " w-full"} disabled={true}> <Code
+                                <Button className={buttonClass + " w-full"} onClick={()=>openLink(repoUrl)}> <Code
                                     className={"mr-2 h-4 w-4"}/> {t("hero.repositoryButton")} </Button>
-                                <Button tooltipContent={t("disabledDisclaimers.report")} className={buttonClass + " w-full"} disabled={true} variant={"outline"}> <Text
+                                <Button className={buttonClass + " w-full"} variant={"outline"} onClick={()=> openLink(reportUrl)}> <Text
                                      className={"mr-2 h-4 w-4"}/> {t("hero.reportButton")}
                                 </Button>
+
                             </div>
                         </div>
 
@@ -124,8 +129,8 @@ function App() {
                                 <p> {t("cardSection.builtIn.body")}</p>
                             </CardContent>
                             <CardFooter>
-                                <Button tooltipContent={t("disabledDisclaimers.github")} className={buttonClass} disabled={true} size={"sm"} variant={"outline"}> <Code
-                                    className={"mr-2 h-4 w-4"}/> {t("cardSection.builtIn.button")}</Button>
+                                <Button className={buttonClass} size={"sm"} variant={"outline"} onClick={()=> openLink(repoUrl)}> <Code
+                                    className={"mr-2 h-4 w-4"}  /> {t("cardSection.builtIn.button")}</Button>
                             </CardFooter>
                         </Card>
 
@@ -143,7 +148,7 @@ function App() {
 
                             </CardContent>
                             <CardFooter>
-                                <Button tooltipContent={t("disabledDisclaimers.report")} size={"sm"} variant={"outline"} disabled={true} className={buttonClass}>
+                                <Button size={"sm"} variant={"outline"} className={buttonClass} onClick={()=> openLink(reportUrl)}>
                                     <Text
                                         className={"mr-2 h-4 w-4"}/> {t("cardSection.design.button")}</Button>
                             </CardFooter>
@@ -215,3 +220,8 @@ function App() {
 }
 
 export default App
+
+
+const openLink = (link:string) =>{
+    window.open(link, "_blank")
+}
