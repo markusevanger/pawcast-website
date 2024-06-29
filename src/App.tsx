@@ -6,7 +6,7 @@ import {Button} from "@/components/ui/button.tsx";
 import {Carousel, CarouselApi, CarouselContent, CarouselItem} from "@/components/ui/carousel.tsx";
 import {useTranslation} from "react-i18next";
 import {useEffect, useState} from "react";
-
+import Pdf from './assets/prosjektrapport.pdf'
 
 function App() {
 
@@ -14,6 +14,8 @@ function App() {
     const setThemeString = (newTheme: 'dark' | 'light') => {
         setTheme(newTheme);
     }
+
+
 
 
     const [api, setApi] = useState<CarouselApi>()
@@ -58,6 +60,9 @@ function App() {
         <div className={""}>
 
 
+            <a href={Pdf} target={"_blank"}> pdf!</a>
+
+
             <div className={"p-5"}>
                 <NavBar setThemeString={setThemeString}/>
             </div>
@@ -76,10 +81,11 @@ function App() {
                             </p>
 
                             <div className={"flex gap-3 w-full md:items-center flex-col md:flex-row py-5"}>
-                                <Button className={buttonClass + " w-full"} onClick={()=>openLink(repoUrl)}> <Code
+                                <Button className={buttonClass + " w-full"} onClick={() => openLink(repoUrl)}> <Code
                                     className={"mr-2 h-4 w-4"}/> {t("hero.repositoryButton")} </Button>
-                                <Button className={buttonClass + " w-full"} variant={"outline"} onClick={()=> openLink(reportUrl)}> <Text
-                                     className={"mr-2 h-4 w-4"}/> {t("hero.reportButton")}
+                                <Button className={buttonClass + " w-full"} variant={"outline"}
+                                        onClick={() => openLink(reportUrl)}> <Text
+                                    className={"mr-2 h-4 w-4"}/> {t("hero.reportButton")}
                                 </Button>
 
                             </div>
@@ -129,8 +135,9 @@ function App() {
                                 <p> {t("cardSection.builtIn.body")}</p>
                             </CardContent>
                             <CardFooter>
-                                <Button className={buttonClass} size={"sm"} variant={"outline"} onClick={()=> openLink(repoUrl)}> <Code
-                                    className={"mr-2 h-4 w-4"}  /> {t("cardSection.builtIn.button")}</Button>
+                                <Button className={buttonClass} size={"sm"} variant={"outline"}
+                                        onClick={() => openLink(repoUrl)}> <Code
+                                    className={"mr-2 h-4 w-4"}/> {t("cardSection.builtIn.button")}</Button>
                             </CardFooter>
                         </Card>
 
@@ -148,7 +155,8 @@ function App() {
 
                             </CardContent>
                             <CardFooter>
-                                <Button size={"sm"} variant={"outline"} className={buttonClass} onClick={()=> openLink(reportUrl)}>
+                                <Button size={"sm"} variant={"outline"} className={buttonClass}
+                                        onClick={() => openLink(reportUrl)}>
                                     <Text
                                         className={"mr-2 h-4 w-4"}/> {t("cardSection.design.button")}</Button>
                             </CardFooter>
@@ -192,8 +200,10 @@ function App() {
                             </div>
 
                             <div className={"flex w-full justify-center gap-5 p-2"}>
-                                <Button size={"icon"} onClick={() => api?.scrollPrev(false)} variant={"outline"}><ArrowLeft></ArrowLeft></Button>
-                                <Button size={"icon"} onClick={() => api?.scrollNext(false)} variant={"outline"}><ArrowRight></ArrowRight></Button>
+                                <Button size={"icon"} onClick={() => api?.scrollPrev(false)}
+                                        variant={"outline"}><ArrowLeft></ArrowLeft></Button>
+                                <Button size={"icon"} onClick={() => api?.scrollNext(false)}
+                                        variant={"outline"}><ArrowRight></ArrowRight></Button>
                             </div>
 
                         </div>
@@ -209,7 +219,8 @@ function App() {
                         <p> {t("bottomInfo.developedBy")} <a className={"underline"}
                                                              href={t("bottomInfo.markusevangerLink")}>markusevanger.no</a>💖
                         </p>
-                        <p><a href={"https://github.com/markusevanger/pawcast-website/"} className={"underline"}>Github</a></p>
+                        <p><a href={"https://github.com/markusevanger/pawcast-website/"}
+                              className={"underline"}>Github</a></p>
                     </div>
                 </section>
 
